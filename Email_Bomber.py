@@ -91,7 +91,7 @@ class Email_Bomber:
 
             self.fromAddr = str(input(bcolors.GREEN + 'Enter from address <: '))
             self.fromPwd = str(input(bcolors.GREEN + 'Enter from password <: '))
-            self.subject = str(input(bcolors.GREEN + 'Enter subject <: '))
+          
             self.message = str(input(bcolors.GREEN + 'Enter message <: '))
 
             self.msg = '''From: %s\nTo: %s\nSubject %s\n%s\n
@@ -109,7 +109,7 @@ class Email_Bomber:
         try:
             self.s.sendmail(self.fromAddr, self.target, self.msg)
             self.count +=1
-            print(bcolors.YELLOW + f'BOMB: {self.count}')
+            print(bcolors.GREEN + f'BOMB: {self.count}')
         except Exception as e:
             print(f'ERROR: {e}')
 
